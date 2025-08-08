@@ -1,12 +1,11 @@
 """
-Author: Parashar
-Date: 4 Aug 2025
-Program to create do list via command line
+# Author: Parashar
+# Date: 4 Aug 2025
+# Program to create do list via command line
 
 """
 
 import os
-import datetime
 import logging
 import time
 

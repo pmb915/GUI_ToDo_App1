@@ -9,8 +9,10 @@ import os
 import datetime
 import logging
 import time
+
 now = time.strftime("%b %d, %Y %H:%M:%S", time.localtime())
-print("It is", now, "\n")
+print("Current Time:", now, "\n")
+
 from support_func import clear_terminal , write_file, populate_todo_list , display_todo_list
 
 

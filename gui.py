@@ -2,7 +2,6 @@
 from  support_func import clear_terminal , write_file, populate_todo_list , display_todo_list
 import FreeSimpleGUI as sg
 
-
 label = sg.Text("Type in a to-do:")
 input_box = sg.InputText(tooltip="Enter to-do action")
 add_button = sg.Button("Add")

@@ -40,7 +40,7 @@ fh = logging.FileHandler(log_file)
 fh.setLevel(logging.INFO)
 logger.addHandler(fh)
 
-#ger.info('Beginning todo application')
+# ger.info('Beginning todo application')
 
 clear_terminal()
 print(f"Current folder location: {current_location}")
@@ -92,7 +92,7 @@ while True:
             if todo_list:
                 display_todo_list(todo_list)
                 number = int(input("Enter the position for item to complete/remove:"))
-                #new_todo = input("Enter todo action to modify:")
+                # new_todo = input("Enter todo action to modify:")
                 if number < len(todo_list):
                     x=todo_list.pop(number)
                     msg = f"todo item '{x.strip('\n')}' at position {number} is removed"

@@ -1,5 +1,5 @@
 """
-module for todo application
+# module for todo application
 """
 import os
 
@@ -16,7 +16,7 @@ def clear_terminal():
 
 def populate_todo_list(todo_file):
     """
-    read todo_file and populate todo list
+    # read todo_file and populate todo list
     :return:
     """
     try:

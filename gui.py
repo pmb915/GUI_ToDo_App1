@@ -15,7 +15,7 @@ list_box = sg.Listbox(tooltip="Display and let select ToDo's for edit/removal",
                       size=(44,8), key='todolist', enable_events=True,
                       values=populate_todo_list(todo_file))
 edit_button = sg.Button("Edit")
-# remove_button = sg.Button("Remove")
+remove_button = sg.Button("Remove")
 
 # show_button = sg.Button("Show")
 # clear_button = sg.Button("Clear")
@@ -24,7 +24,8 @@ exit_button = sg.Button("Quit")
 # define the layout
 my_layout = [[label],
              [input_box, add_button],
-             [list_box, edit_button],
+             [list_box,
+              [edit_button , remove_button]],
              [exit_button]]
 
 # Create the window
@@ -59,7 +60,7 @@ while True:
             item_to_edit = values['todolist'][0]
             new_item = values['todo']+'\n'
             todo_list = populate_todo_list(todo_file)
-            print(todo_list)
+            # print(todo_list)
             try:
                 index_to_edit = todo_list.index(item_to_edit)
                 todo_list[index_to_edit] = new_item
@@ -70,13 +71,25 @@ while True:
                 # window['todo'].update(values=None)
             except ValueError as e:
                 print(f"Error: {e}")
-
+        case "Remove":
+            # item_to_edit = values['todolist'][0].replace('\n','')
+            item_to_remove = values['todolist'][0]
+            todo_list = populate_todo_list(todo_file)
+            try:
+                index_to_remove = todo_list.index(item_to_remove)
+                todo_list.remove(item_to_remove)
+                write_file(todo_file, todo_list)
+                print(f"item_to_remove = {item_to_remove.strip('\n')}, is removed!")
+                window['todolist'].update(values=todo_list)
+                window['todo'].update(value='')
+            except Exception as e:
+                print(f"Error: {e}")
         case 'todolist' :
             window['todo'].update(value = values['todolist'][0])
-            
+
         case "Quit" | sg.WIN_CLOSED :
             print("Closing the application")
-            break
+            exit(0)
         case _:
             pass
     """

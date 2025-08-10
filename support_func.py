@@ -45,6 +45,7 @@ def display_todo_list(lst):
     for index, item in enumerate(lst):
         print(f"position: {index} - todo: {item.strip('\n')}")
 
+
 if __name__ == '__main__':
     clear_terminal()
     print(f"Hello: {__name__}, filename is : {__file__}")

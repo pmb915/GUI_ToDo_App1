@@ -1,7 +1,7 @@
 Read the book
 Write the Page
-Fly in the Sky
-Bring the Shelf
-Swim in the Pond
-Clean the Room
+Look in the Sky
+Buy the Shelf
+Swim in the River
 Place Book in BookShelf
+new item

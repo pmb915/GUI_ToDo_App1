@@ -7,6 +7,11 @@ import time
 current_location = os.getcwd()
 # current_code_file_name = os.path.basename(__file__)
 todo_file =os.path.join(current_location, 'data',"todo_file.txt")
+
+if not os.path.exists(todo_file):
+    with open(todo_file, 'w') as f:
+        f.write('')
+
 # defining class for custom error message
 class MyCustomError(Exception):
     """

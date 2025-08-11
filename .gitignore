@@ -6,4 +6,8 @@
 __pycache__
 log_file.txt
 /data/todo_list_image.jpg
+/dist/
+/build/
+dist
+build
 
